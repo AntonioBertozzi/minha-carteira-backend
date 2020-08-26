@@ -1,0 +1,23 @@
+{
+  "name": "minha-carteira-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonioBertozzi/minha-carteira-backend.git"
+  },
+  "keywords": [],
+  "author": "Antonio Eduardo Moretti Bertozzi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonioBertozzi/minha-carteira-backend/issues"
+  },
+  "homepage": "https://github.com/AntonioBertozzi/minha-carteira-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
