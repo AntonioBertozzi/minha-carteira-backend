@@ -1,11 +1,13 @@
+  
 const express = require('express');
 const server = express();
 
-server.get('/boasvindas',function(request, response){
-    response.send('<h1>BEM VINDO A NOSSA API</H1>');
-});
+const routes = require('./routes');
+server.use(express.json());
+server.use(routes);
+
 
 server.listen(3333, function(){
-    console.log('O PAI TÁ ON!');
+  console.log('O PAI TÁ ON!');
 });
 
