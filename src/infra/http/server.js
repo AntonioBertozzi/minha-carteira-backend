@@ -8,6 +8,6 @@ server.use(routes);
 
 
 server.listen(3333, function(){
-  console.log('O PAI TÁ ON!');
+  console.log('Server online na porta 3333');
 });
 
