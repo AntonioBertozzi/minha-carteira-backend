@@ -4,6 +4,12 @@ class SignUpService {
   async execute(data){
     const { name, email, password } = data;
 
+    const emailAlreadyUsed = await UsersRepository.findByEmail(email);
+
+    if(emailAlreadyUsed){
+      return {error: 'email not avaiable. Choice another!'}
+    }
+
     const user = await UsersRepository.add({ name, email, password});
 
    
