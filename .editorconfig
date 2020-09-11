@@ -1,0 +1,9 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true # Remove espaços no final das linhas.
+insert_final_newline = true # Coloca uma linha no fim do código.
+end_of_line = lf # mantem o padrão entre SO.
