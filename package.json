@@ -21,12 +21,18 @@
     "express": "^4.17.1",
     "mongoose": "^5.10.3"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo Sextooooooooou"
+    }
+  },
   "devDependencies": {
     "eslint": "^7.8.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
     "prettier": "^2.1.1"
   }
 }
