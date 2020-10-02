@@ -4,7 +4,7 @@ class UsersRepository {
   async add(data) {
     const user = await mongo
       .collection('users')
-      .insert(data)
+      .insertOne(data)
       .then(result => {
         return result;
       });
@@ -26,4 +26,4 @@ class UsersRepository {
   }
 }
 
-module.exports = new UsersRepository();
+module.exports = UsersRepository;
