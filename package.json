@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon ./src/infra/http/server.js",
     "test": "jest --watchAll",
-    "test:commit": "jest --passWithNoTests"
+    "test:commit": "jest --passWithNoTests -- findRelatedTests",
+    "test:report": "jest --coverage"
   },
   "husky": {
     "hooks": {
@@ -16,8 +17,8 @@
   "lint-staged": {
     "*.js": [
       "eslint --fix",
-      "git add",
-      "npm run test:commit"
+      "npm run test:commit",
+      "git add"
     ]
   },
   "repository": {

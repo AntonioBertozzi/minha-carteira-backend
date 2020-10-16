@@ -12,12 +12,12 @@ class SignUpService {
     if (emailAlreadyUsed)
       return { error: 'Email not avaiable. Choise another!' };
 
-    const passwordHashed = await this.cryptProvider.hash(password, 10);
+    const passwordeHashed = await this.cryptProvider.hash(password, 10);
 
     const user = await this.usersRepository.add({
       name,
       email,
-      password: passwordHashed,
+      password: passwordeHashed,
     });
 
     return user;

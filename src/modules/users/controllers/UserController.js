@@ -13,16 +13,20 @@ class UserController {
     if (!password) return response.json({ message: 'password is required' });
 
     if (!password_confirm)
-      return response.json({ message: 'password confirm is required' });
+      return response.json({ message: 'password_confirm is required' });
 
     if (password !== password_confirm)
-      return response.json({ message: "password doesn't match" });
+      return response.json({ message: 'password not match' });
 
     const usersRepository = new UsersRepository();
     const bcryptProvider = new BcryptProvider();
     const signUpService = new SignUpService(usersRepository, bcryptProvider);
 
-    const user = await signUpService.execute({ name, email, password });
+    const user = await signUpService.execute({
+      name,
+      email,
+      password,
+    });
 
     return response.json(user);
   }
