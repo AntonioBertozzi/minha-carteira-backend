@@ -1,9 +1,9 @@
 const { Router } = require('express');
-const entryController = require('../../../modules/finance/controllers/entryController');
+const movimentController = require('../../../modules/finance/controllers/movimentController');
 const authenticated = require('../middlewares/authenticated');
 
 const financeRouter = Router();
 
-financeRouter.post('/entry', authenticated, entryController.create);
+financeRouter.post('/moviment', authenticated, movimentController.create);
 
 module.exports = financeRouter;
