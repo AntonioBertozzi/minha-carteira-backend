@@ -28,6 +28,7 @@ class MovimentController {
   async delete(request, response) {
     const repository = new FinanceRepository();
     const movimentRemove = new MovimentRemove(repository);
+
     const user_id = request.user.id.sub;
     const moviment_id = request.params.id;
 
