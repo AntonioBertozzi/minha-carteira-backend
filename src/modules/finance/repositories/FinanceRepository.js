@@ -36,7 +36,24 @@ class FinanceRepository {
     return moviment;
   }
 
-  // async movimentRemove(id) {}
+  async movimentRemove(id) {
+    const moviment = await mongo
+      .collection('moviments')
+      .deleteOne({ _id: mongoose.Types.ObjectId(id) });
+
+    return moviment;
+  }
+
+  async movimentFind(id) {
+    const moviment = await mongo
+      .collection('moviments')
+      .findOne({
+        user_id: mongoose.Types.ObjectId(id),
+      })
+      .toArray();
+
+    return moviment;
+  }
 }
 
 module.exports = FinanceRepository;
