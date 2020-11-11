@@ -11,5 +11,5 @@ server.use(routes);
 
 server.listen(3333, () => {
   /* eslint-disable-next-line */
-  console.log('Server online na porta 3333');
+  console.log('Server is running on 3333 port!');
 });

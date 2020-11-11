@@ -1,10 +1,11 @@
 class FinanceRepositoryFake {
   async add(data) {
-    const dataFormated = {
+    const dataFormatted = {
       id: 'any_id',
       ...data,
     };
-    return dataFormated;
+
+    return dataFormatted;
   }
 }
 
