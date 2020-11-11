@@ -43,17 +43,6 @@ class FinanceRepository {
 
     return moviment;
   }
-
-  async movimentFind(id) {
-    const moviment = await mongo
-      .collection('moviments')
-      .findOne({
-        user_id: mongoose.Types.ObjectId(id),
-      })
-      .toArray();
-
-    return moviment;
-  }
 }
 
 module.exports = FinanceRepository;
